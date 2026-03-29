@@ -1,17 +1,23 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioNoiseProcessing : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   
+
+
+    public Text text;
+    public Slider slider;
     public AudioSource audioSource;
     public float updateStep = 0.1f;
-    public int sampleDataLength = 1024;
-
+    private string CurrentMicroDevice;
     private float currentUpdateTime = 0f;
 
     private float clipLoudness;
     private float[] clipSampleData;
+
+    public float GameVoiceLoudness;
+    public float grav = 0.0001f;
+    public float descendSpeed = 0;
 
     // Use this for initialization
     void Awake()
@@ -21,18 +27,14 @@ public class AudioNoiseProcessing : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
-        clipSampleData = new float[sampleDataLength];
-
-    }
-
-    void Start()
-    {
-
-        string firstDeviceName = Microphone.devices[0];
-        Debug.Log(Microphone.devices[0]);
-        audioSource.clip = Microphone.Start(firstDeviceName, true, 1, AudioSettings.outputSampleRate);
        
-        
+        CurrentMicroDevice = Microphone.devices[0];
+ 
+        Debug.Log(Microphone.devices[0]);
+        audioSource.clip = Microphone.Start(CurrentMicroDevice, false, 300, AudioSettings.outputSampleRate/2);
+        Debug.Log(AudioSettings.outputSampleRate);
+        clipSampleData = new float[AudioSettings.outputSampleRate / 10];
+        audioSource.Play();
 
     }
 
@@ -40,18 +42,39 @@ public class AudioNoiseProcessing : MonoBehaviour
     void Update()
     {
 
+        
+
         currentUpdateTime += Time.deltaTime;
         if (currentUpdateTime >= updateStep)
         {
+            
+
             currentUpdateTime = 0f;
-            audioSource.clip.GetData(clipSampleData, audioSource.timeSamples); //I read 1024 samples, which is about 80 ms on a 44khz stereo clip, beginning at the current sample position of the clip.
+            audioSource.clip.GetData(clipSampleData, audioSource.timeSamples); //The more samplse you get, the more accurate and smooth the reading, but also more costly.
             clipLoudness = 0f;
             foreach (var sample in clipSampleData)
             {
                 clipLoudness += Mathf.Abs(sample);
             }
-            clipLoudness /= sampleDataLength; //clipLoudness is what you are looking for
-            Debug.Log(clipLoudness.ToString());
+            clipLoudness /= AudioSettings.outputSampleRate / 10; //Average of the sampled time
+
+            text.text = clipLoudness.ToString();
+            if (GameVoiceLoudness < clipLoudness) 
+            { 
+                GameVoiceLoudness = clipLoudness;
+                descendSpeed = 0f;
+            }
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                GameVoiceLoudness += 0.005f;
+                descendSpeed = 0f;
+            }
+
+
+            slider.value = GameVoiceLoudness;
+            descendSpeed += grav;
+            GameVoiceLoudness -= descendSpeed;
         }
 
     }
