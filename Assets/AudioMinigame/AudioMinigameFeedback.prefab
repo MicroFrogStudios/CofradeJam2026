@@ -97,6 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3703166303435379022}
   - component: {fileID: 7691991083070390673}
+  - component: {fileID: 1907362579642838492}
   m_Layer: 0
   m_Name: TargetZone
   m_TagString: Untagged
@@ -174,6 +175,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &1907362579642838492
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610201464916224887}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 70a26ec60af6c694a96fd6311307f994, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 70a26ec60af6c694a96fd6311307f994, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &5950139925695916971
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +218,7 @@ Transform:
   m_GameObject: {fileID: 5950139925695916971}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.501, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -310,20 +328,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLevelMarker: {fileID: 5950139925695916971}
+  TargetLoudness: {fileID: 3703166303435379022}
   audioSource: {fileID: 0}
   updateStep: 0.1
+  sampleBuffer: 2048
   GameVoiceLoudness: 0
-  grav: 0.0005
-  descendSpeed: 0
+  gravityPct: 0.005
+  speedIncrementPct: 0.05
   maxLoud: 0
   minLoud: 0
-  targetLoudness: 0
-  bufferLoudness: 0
   underLoudMistakes: 0
   overLoudMistakes: 0
   graceTime: 1
   startedRecording: 0
   calibrating: 1
+  beingQuiet: 0
+  beingLoud: 0
+  errorTolerance: 30
 --- !u!82 &8708657945111698591
 AudioSource:
   m_ObjectHideFlags: 0
