@@ -272,8 +272,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4292730333
+  m_fontColor: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -541,7 +541,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.0983001, g: 0.288103, b: 0.4433962, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f9001a99f80e542bc9b6e8d998861c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onString: Finish Calibration
-  offString: Start Calibration
+  onString: "Terminar Calibraci\xF3n"
+  offString: Calibrar
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -288.9, y: -242.9}
+  m_AnchoredPosition: {x: -270.98, y: -272.5}
   m_SizeDelta: {x: 63.8293, y: 63.8293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025703641
@@ -1491,15 +1491,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.800281
+      value: 3.7103724
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.653
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.502
+      value: -1.31
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalPosition.z

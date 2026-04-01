@@ -324,7 +324,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6700345206127520324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f301785b028d7fb45b64a8ec9b7993ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 149bcd751e5104c4194ba06e385f80ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLevelMarker: {fileID: 5950139925695916971}
@@ -341,7 +341,7 @@ MonoBehaviour:
   overLoudMistakes: 0
   graceTime: 1
   startedRecording: 0
-  calibrating: 1
+  calibrating: 0
   beingQuiet: 0
   beingLoud: 0
   errorTolerance: 30
