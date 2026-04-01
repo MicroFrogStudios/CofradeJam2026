@@ -7,13 +7,12 @@ public class SlidesManager : MonoBehaviour
 {
 
     public Image fadeImage;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         StartCoroutine(FadeIn());
     }
 
-    // Update is called once per frame
 
     public void NextScene()
     {
