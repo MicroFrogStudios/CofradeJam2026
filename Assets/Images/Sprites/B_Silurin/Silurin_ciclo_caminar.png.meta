@@ -102,7 +102,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1000
+        width: 500
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,9 +122,9 @@ TextureImporter:
       name: Silurin_ciclo_caminar_1
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 500
         y: 0
-        width: 1000
+        width: 500
         height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -136,6 +136,50 @@ TextureImporter:
       bones: []
       spriteID: 5e973318ef2358848bf90f374cf3e54b
       internalID: -470854101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silurin_ciclo_caminar_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c989a88be38b6c49bd84dacbc829227
+      internalID: 1666742719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Silurin_ciclo_caminar_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bab9866626b5f4784036c157014333
+      internalID: 1600924099
       vertices: []
       indices: 
       edges: []
@@ -156,6 +200,8 @@ TextureImporter:
     nameFileIdTable:
       Silurin_ciclo_caminar_0: 678611226
       Silurin_ciclo_caminar_1: -470854101
+      Silurin_ciclo_caminar_2: 1666742719
+      Silurin_ciclo_caminar_3: 1600924099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
