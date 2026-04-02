@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class GameFlowManager : MonoBehaviour
@@ -21,6 +22,8 @@ public class GameFlowManager : MonoBehaviour
     public Animator Shark;
     public Animator besugo;
     public Animator gameOverAnim;
+
+    public GameObject GameOverUI;
     public void AddChatEvent(string chatName)
     {
         ActiveChat = Array.Find(Chats, chat => chat.chatName == chatName);
@@ -35,7 +38,8 @@ public class GameFlowManager : MonoBehaviour
     private void Start()
     {
         AddChatEvent("start");
-        
+        startIdleTime = Time.time;
+
     }
 
     void EndChatEvent()
@@ -98,5 +102,21 @@ public class GameFlowManager : MonoBehaviour
         SlidesManager.Instance.StartCoroutine(SlidesManager.Instance.FadeIn());
         Camera.main.GetComponent<Animation>().Play();
         gameOverAnim.gameObject.SetActive(true);
+        StartCoroutine(WaitForAnimation());
+    }
+    IEnumerator WaitForAnimation()
+    {
+        yield return new WaitUntil(() => gameOverAnim.GetCurrentAnimatorStateInfo(0).IsName("Animation_GameOverLast"));
+        GameOverUI.SetActive(true);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
