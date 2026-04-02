@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3da5f0a494701247a82e26bd5091cad, type: 3}
-  m_Name: Timeout3SO
+  m_Name: afterAudio4SO
   m_EditorClassIdentifier: 
-  chatName: timeout3
+  chatName: afterAudio4
   messagesArray:
-  - los creadores de este juego no pensaron que lo mismo
-  - alguien no iba a quere mandar audios?
-  - pues vaya unos notas
-  - a ti lo que te gusta es escribir no?
+  - ya escucho el paso, creo q te veo
+  - "a ve manda uno m\xE1s"
   indexPointer: 0
-  isLong: 01000000
+  isLong: 0000

@@ -624,10 +624,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 825a25cf09f295649981be6ebe7de4cc, type: 2}
   - {fileID: 11400000, guid: 66068f6c3524f074e825661aef7ff671, type: 2}
   - {fileID: 11400000, guid: 7069c365540595c4fb27331560215b1e, type: 2}
+  - {fileID: 11400000, guid: 5966a2fea0f21d149b97cfb0268e5914, type: 2}
+  - {fileID: 11400000, guid: 4fc8a6ca23478274f8f811b35fd99f1b, type: 2}
   phone: {fileID: 544718941}
   ActiveChat: {fileID: 0}
   messageDelay: 1.2
   timePassed: 0
+  idleTimeoutTime: 13
+  startIdleTime: 0
+  idle: 1
+  timeoutCount: 1
+  shushers:
+  - {fileID: 1415771007}
+  - {fileID: 1431673102}
+  - {fileID: 839961894}
+  - {fileID: 1771777959}
+  - {fileID: 517941574}
+  Shark: {fileID: 1452335937}
 --- !u!4 &246327828
 Transform:
   m_ObjectHideFlags: 0
@@ -4034,23 +4047,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.52
+      value: 5.38
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.52
+      value: 5.38
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.52
+      value: 5.38
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.27
+      value: -3.21
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -221,7 +221,9 @@ public class AudioNoiseProcessing : MonoBehaviour
 
     void Shush()
     {
-
+        for (int i = 0; i < overLoudMistakes && i < GameFlowManager.Instance.shushers.Length; i++) {
+            GameFlowManager.Instance.shushers[i].SetTrigger("Callando");
+        }
     }
 
     void HandleMistakes()

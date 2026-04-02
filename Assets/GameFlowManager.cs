@@ -15,6 +15,9 @@ public class GameFlowManager : MonoBehaviour
     public float startIdleTime;
     public bool idle = true;
     public int timeoutCount = 0;
+
+    public Animator[] shushers;
+    public Animator Shark;
     public void AddChatEvent(string chatName)
     {
         ActiveChat = Array.Find(Chats, chat => chat.chatName == chatName);
@@ -38,6 +41,7 @@ public class GameFlowManager : MonoBehaviour
         ActiveChat.indexPointer = 0;
         ActiveChat = null;
         startIdleTime = Time.time;
+        idle = true;
     }
 
     // Update is called once per frame
@@ -46,6 +50,7 @@ public class GameFlowManager : MonoBehaviour
         if (startIdleTime + idleTimeoutTime < Time.time && idle)
         {
             timeoutCount++;
+            idle = false;
             if (timeoutCount >= 4)
                 return;
             AddChatEvent("timeout" + timeoutCount.ToString());
