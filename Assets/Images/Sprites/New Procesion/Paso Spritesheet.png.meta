@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d76b5d42f64c92d47badffb6ba50bd89
+guid: 79329b7bc6e07f646a57e205e5d6c0f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Silurin_ciclo_caminar_0
+      name: Paso Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1000
-        height: 500
+        width: 2000
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d9596fecf439e444b51a72a3470d3bc
-      internalID: 678611226
+      spriteID: c8f93ee0fb5199c4f916912e79b18a1b
+      internalID: -1972874257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silurin_ciclo_caminar_1
+      name: Paso Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 2000
         y: 0
-        width: 1000
-        height: 500
+        width: 2000
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e973318ef2358848bf90f374cf3e54b
-      internalID: -470854101
+      spriteID: 8428dd6608e93c64cba02d58611d99d8
+      internalID: -89436366
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b445840e3d1792148b5177b49347d8b5
+    spriteID: 4bc25d4a04faed247abeec175e938835
     internalID: 0
     vertices: []
     indices: 
@@ -154,8 +154,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Silurin_ciclo_caminar_0: 678611226
-      Silurin_ciclo_caminar_1: -470854101
+      Paso Spritesheet_0: -1972874257
+      Paso Spritesheet_1: -89436366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
