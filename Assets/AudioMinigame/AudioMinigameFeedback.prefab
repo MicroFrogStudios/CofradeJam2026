@@ -523,12 +523,10 @@ MonoBehaviour:
   TargetLoudness: {fileID: 5109992209688308517}
   audioSource: {fileID: 0}
   updateStep: 0.1
-  sampleBuffer: 2048
+  sampleBuffer: 8192
   GameVoiceLoudness: 0
   gravityPct: 0.005
   speedIncrementPct: 0.05
-  maxLoud: 1
-  minLoud: 0
   underLoudMistakes: 0
   overLoudMistakes: 0
   graceTime: 1

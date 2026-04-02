@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/FadeTextLore1.unity
     guid: 950772751b725b245b94d0e35f859218
   - enabled: 1
-    path: Assets/Scenes/MainGameScene_Fran.unity
-    guid: c05052d3d1a72684eb05ff438fac1f1c
+    path: Assets/Scenes/MainGameScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

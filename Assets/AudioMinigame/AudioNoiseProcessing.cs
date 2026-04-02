@@ -37,8 +37,9 @@ public class AudioNoiseProcessing : MonoBehaviour
     public int errorTolerance = 30;
     
 
-    private void Awake()
+    private void Start()
     {
+        clipSampleData = new float[sampleBuffer];
         if (gameInfo.calibrated)
         {
             grav = (gameInfo.maxLoud - gameInfo.minLoud) * gravityPct;
@@ -53,7 +54,7 @@ public class AudioNoiseProcessing : MonoBehaviour
             return;
 
         CurrentMicroDevice = Microphone.devices[0];
-        clipSampleData = new float[sampleBuffer];
+        
         string micDevice = Microphone.devices[0];
         Microphone.GetDeviceCaps(micDevice, out int minFreq, out int maxFreq);
         Debug.Log($"Mic supports: {minFreq}Hz - {maxFreq}Hz");
