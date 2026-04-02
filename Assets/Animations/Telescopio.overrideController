@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Telescopio
+  m_Controller: {fileID: 9100000, guid: cae6b0b70c5a8dd4a958332763b9e048, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 199437dd7e14051429a70ce5bf7bb67a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f878f3a92a5beb742a53417d7f5b703d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: eba02a5e04bc2cc44b9a0872c54c33e6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4c28d32c04c1308439d3f213cfe88222, type: 2}
