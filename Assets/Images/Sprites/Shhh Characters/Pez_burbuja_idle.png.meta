@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 62cadd75f70b45b48ae9da8c0ae62cef
+guid: 5c853d9e58b7ca048baca8f8045dbc4a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 324e30de37010fe49b955d0fc709d4c0
-      internalID: -2075968635
+      spriteID: 10b8a25ec4be1d04ca0d12b040151544
+      internalID: 2019041257
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab9ebfd088183f40ac50239dfff5c5e
-      internalID: -1652824255
+      spriteID: b698a01e639869240a981de36075ff55
+      internalID: -1682311065
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8d6db17d7ffd6c74bbc26968154bea43
+    spriteID: 08bc1333c21f7b94aa2bbd52f6ff8f4b
     internalID: 0
     vertices: []
     indices: 
@@ -154,8 +154,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pez_burbuja_idle_0: -2075968635
-      Pez_burbuja_idle_1: -1652824255
+      Pez_burbuja_idle_0: 2019041257
+      Pez_burbuja_idle_1: -1682311065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
