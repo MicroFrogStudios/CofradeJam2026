@@ -111,15 +111,14 @@ public class AudioNoiseProcessing : MonoBehaviour
         TargetLoudness.GetComponent<Animation>().Play();
         startedRecording = true;
         audioStart = Time.time;
+        GameFlowManager.Instance.idle = false;
 
     }
 
 
     public void ToggleGameRecording()
     {
-        if (Microphone.IsRecording(CurrentMicroDevice))
-            EndGameRecording();
-        else
+        if (!startedRecording)
             StartGameRecording();
     }
 
@@ -129,6 +128,9 @@ public class AudioNoiseProcessing : MonoBehaviour
         audioSource.Stop();
         Microphone.End(CurrentMicroDevice);
         startedRecording = false;
+        GameFlowManager.Instance.startIdleTime = Time.time;
+        GameFlowManager.Instance.idle = true;
+        
     }
 
 
@@ -193,7 +195,7 @@ public class AudioNoiseProcessing : MonoBehaviour
                 {
                     overLoudMistakes++;
                     beingLoud = 0;
-                    //shh
+                    Shush();
                     Debug.Log("SHHH");
                 }
             }
@@ -217,6 +219,11 @@ public class AudioNoiseProcessing : MonoBehaviour
 
     }
 
+    void Shush()
+    {
+
+    }
+
     void HandleMistakes()
     {
         if (overLoudMistakes > 3) {
@@ -227,7 +234,7 @@ public class AudioNoiseProcessing : MonoBehaviour
             return;
         
         EndGameRecording();
-        if (underLoudMistakes > 3)
+        if (underLoudMistakes >= 3)
         {
             GameFlowManager.Instance.phone.AddVoiceMessage(true);
             underLoudMistakes = 0;
