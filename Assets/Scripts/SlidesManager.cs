@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -16,9 +17,17 @@ public class SlidesManager : MonoBehaviour
 
     public void NextScene()
     {
-        StartCoroutine(FadeOut());  
+        StartCoroutine(FadeOut());
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+
+            NextScene();
+        }
+    }
 
     IEnumerator FadeIn()
     {
@@ -30,7 +39,7 @@ public class SlidesManager : MonoBehaviour
             yield return null;
         }
 
-       
+
     }
 
     IEnumerator FadeOut()
@@ -45,8 +54,8 @@ public class SlidesManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    
 
-         
-    
+
+
+
 }

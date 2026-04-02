@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioNoiseProcessing : MonoBehaviour
 {
 
-
+    public GameInfoSO gameInfo;
     public GameObject voiceLevelMarker;
     public RectTransform TargetLoudness;
     public AudioSource audioSource;
@@ -13,7 +13,7 @@ public class AudioNoiseProcessing : MonoBehaviour
     private string CurrentMicroDevice;
     private float currentUpdateTime = 0f;
 
-    private float clipLoudness;
+    private float clipLoudness = 0;
     private float[] clipSampleData;
     public int sampleBuffer = 2048;
     public float GameVoiceLoudness;
@@ -21,8 +21,6 @@ public class AudioNoiseProcessing : MonoBehaviour
     public float gravityPct = .005f;
     public float speedIncrementPct = 0.05f;
     private float gainSpeed = 0;
-
-    public float maxLoud, minLoud;
 
     public int underLoudMistakes = 0;
     public int overLoudMistakes = 0;
@@ -41,15 +39,21 @@ public class AudioNoiseProcessing : MonoBehaviour
 
     private void Awake()
     {
+        if (gameInfo.calibrated)
+        {
+            grav = (gameInfo.maxLoud - gameInfo.minLoud) * gravityPct;
+        }
 
         if (!audioSource)
         {
             audioSource = GetComponent<AudioSource>();
         }
-       
+
+        if (!gameInfo.hasMicro)
+            return;
+
         CurrentMicroDevice = Microphone.devices[0];
         clipSampleData = new float[sampleBuffer];
-
         string micDevice = Microphone.devices[0];
         Microphone.GetDeviceCaps(micDevice, out int minFreq, out int maxFreq);
         Debug.Log($"Mic supports: {minFreq}Hz - {maxFreq}Hz");
@@ -81,8 +85,9 @@ public class AudioNoiseProcessing : MonoBehaviour
         audioSource.Stop();
         Microphone.End(CurrentMicroDevice);
         calibrating = false;
-        grav = (maxLoud - minLoud) * gravityPct;
-        Debug.Log("Max loud: " + maxLoud + " || min loud: " + minLoud);
+        grav = (gameInfo.maxLoud - gameInfo.minLoud) * gravityPct;
+        Debug.Log("Max loud: " + gameInfo.maxLoud + " || min loud: " + gameInfo.minLoud);
+        gameInfo.calibrated = true;
     }
 
 
@@ -101,6 +106,7 @@ public class AudioNoiseProcessing : MonoBehaviour
         audioSource.volume = 0f;
         audioSource.Play();
         TargetLoudness.GetComponent<Animation>().Play();
+        startedRecording = true;
 
     }
 
@@ -118,6 +124,7 @@ public class AudioNoiseProcessing : MonoBehaviour
     {
         audioSource.Stop();
         Microphone.End(CurrentMicroDevice);
+        startedRecording = false;
     }
 
 
@@ -130,7 +137,7 @@ public class AudioNoiseProcessing : MonoBehaviour
         }
 
 
-        if (!Microphone.IsRecording(CurrentMicroDevice))
+        if (!startedRecording)
         {
             return;
         }
@@ -142,20 +149,24 @@ public class AudioNoiseProcessing : MonoBehaviour
         if (currentUpdateTime >= updateStep)
         {
             currentUpdateTime = 0f;
-            if (Microphone.GetPosition(CurrentMicroDevice) - sampleBuffer <= 0)
-                return;
-            SampleAudio();
+            if (gameInfo.hasMicro)
+            {
+                if (Microphone.GetPosition(CurrentMicroDevice) - sampleBuffer <= 0)
+                    return;
+                SampleAudio();
+            }
+           
 
-            if (GameVoiceLoudness < clipLoudness || Input.GetKey(KeyCode.Space)) 
+            if (gameInfo.hasMicro && GameVoiceLoudness < clipLoudness || Input.GetKey(KeyCode.Space)) 
             { 
                 
-                GameVoiceLoudness += (maxLoud - minLoud) * speedIncrementPct;
+                GameVoiceLoudness += (gameInfo.maxLoud - gameInfo.minLoud) * speedIncrementPct;
                 gainSpeed = 0f;
             }
  
 
             
-            float normLoud = (GameVoiceLoudness - minLoud) / (maxLoud - minLoud);
+            float normLoud = (GameVoiceLoudness - gameInfo.minLoud) / (gameInfo.maxLoud - gameInfo.minLoud);
             bool tooLoud = normLoud > TargetLoudness.anchoredPosition.x + TargetLoudness.sizeDelta.x * 0.5f;
             bool tooQuiet = normLoud < TargetLoudness.anchoredPosition.x - TargetLoudness.sizeDelta.x * 0.5f;
 
@@ -230,20 +241,34 @@ public class AudioNoiseProcessing : MonoBehaviour
                 return;
 
             SampleAudio();
-           
+
+            if (GameVoiceLoudness < clipLoudness)
+            {
+
+                GameVoiceLoudness += (gameInfo.maxLoud - gameInfo.minLoud) * speedIncrementPct;
+                gainSpeed = 0f;
+            }
+
+            float normLoud = (GameVoiceLoudness - gameInfo.minLoud) / (gameInfo.maxLoud - gameInfo.minLoud);
+            voiceLevelMarker.transform.SetLocalPositionAndRotation(new Vector3(0, Mathf.Clamp(normLoud, 0, 1), 0), Quaternion.identity);
+
+            gainSpeed -= grav;
+            GameVoiceLoudness += gainSpeed;
+
 
             if (firstLoop)
             {
-                minLoud = clipLoudness;
-                maxLoud = clipLoudness;
+                gameInfo.minLoud = clipLoudness;
+                gameInfo.maxLoud = clipLoudness;
                 firstLoop = false;
             }
 
-            if (clipLoudness < minLoud)
-                minLoud = clipLoudness;
+            if (clipLoudness < gameInfo.minLoud)
+                gameInfo.minLoud = clipLoudness;
 
-            if (clipLoudness > maxLoud)
-                maxLoud = clipLoudness;
+            if (clipLoudness > gameInfo.maxLoud)
+                gameInfo.maxLoud = clipLoudness;
+            grav = (gameInfo.maxLoud - gameInfo.minLoud) * gravityPct;
 
         }
     }

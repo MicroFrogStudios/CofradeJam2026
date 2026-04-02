@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149bcd751e5104c4194ba06e385f80ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameInfo: {fileID: 11400000, guid: 43a84eb9dbb76fc4bb2faddbfdcb8a90, type: 2}
   voiceLevelMarker: {fileID: 5950139925695916971}
   TargetLoudness: {fileID: 5109992209688308517}
   audioSource: {fileID: 0}
@@ -526,7 +527,7 @@ MonoBehaviour:
   GameVoiceLoudness: 0
   gravityPct: 0.005
   speedIncrementPct: 0.05
-  maxLoud: 0
+  maxLoud: 1
   minLoud: 0
   underLoudMistakes: 0
   overLoudMistakes: 0
