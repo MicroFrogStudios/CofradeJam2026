@@ -9,5 +9,7 @@ AnimatorOverrideController:
   m_Name: Pez_Burbuja
   m_Controller: {fileID: 9100000, guid: cae6b0b70c5a8dd4a958332763b9e048, type: 2}
   m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: eba02a5e04bc2cc44b9a0872c54c33e6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ddd838e5edcc70146b1613130c337d2f, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 199437dd7e14051429a70ce5bf7bb67a, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 69d55da39fba66d418b807bc46753013, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: efd0d751207a9104fb4ddbc1adc584ac, type: 2}

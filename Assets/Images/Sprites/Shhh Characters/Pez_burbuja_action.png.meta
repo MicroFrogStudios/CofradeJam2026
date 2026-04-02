@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 273bfbad83547a747b0e8ff609f20cb3
-      internalID: 854256329
+      spriteID: 0c9289e49b760cf42b88fd6f59d95680
+      internalID: 2127681086
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96f703b7b74686c47a4d941fe3f6905a
-      internalID: -539731453
+      spriteID: b33279ae17f35424ca6dc13866607838
+      internalID: 1587586612
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 78967a6e6a1a5d746895bf3420eb6ff7
+    spriteID: d4eff43b48debb740812f3fb88077ed1
     internalID: 0
     vertices: []
     indices: 
@@ -154,8 +154,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pez_burbuja_action_0: 854256329
-      Pez_burbuja_action_1: -539731453
+      Pez_burbuja_action_0: 2127681086
+      Pez_burbuja_action_1: 1587586612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
