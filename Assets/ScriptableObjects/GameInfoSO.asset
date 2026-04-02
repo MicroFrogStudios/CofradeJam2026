@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2483e8bce9ade2045af4c7f8620740f4, type: 3}
   m_Name: GameInfoSO
   m_EditorClassIdentifier: 
-  maxLoud: 1
-  minLoud: 0
-  calibrated: 0
+  maxLoud: 6.9583015
+  minLoud: -36.993385
+  calibrated: 1
+  hasMicro: 1
