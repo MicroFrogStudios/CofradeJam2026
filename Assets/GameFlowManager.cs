@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -17,10 +18,11 @@ public class GameFlowManager : MonoBehaviour
     public float startIdleTime;
     public bool idle = true;
     public int timeoutCount = 0;
-
+    public bool winning = false;
     public Animator[] shushers;
     public Animator Shark;
     public Animator besugo;
+    public Animator siluro;
     public Animator gameOverAnim;
 
     public GameObject GameOverUI;
@@ -118,5 +120,29 @@ public class GameFlowManager : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void SiluroEnding()
+    {
+        winning = true;
+        idle = false;
+        siluro.SetBool("andando", true);
+        SlidesManager.Instance.cinematicBars.Play();
+        StartCoroutine(WalikngSiluro());
+
+    }
+
+    IEnumerator WalikngSiluro()
+    {
+        while (Vector3.Distance(besugo.transform.position, siluro.transform.position) > 2f)
+        {
+            Debug.Log("andando");
+            siluro.transform.position = Vector3.MoveTowards(siluro.transform.position, besugo.transform.position + Vector3.up * .8f, .01f);
+            yield return null;
+        }
+
+        siluro.SetBool("andando", false);
+        GameFlowManager.Instance.AddChatEvent("end");
+
     }
 }

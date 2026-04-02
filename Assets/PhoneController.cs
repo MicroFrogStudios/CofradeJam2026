@@ -33,6 +33,10 @@ public class PhoneController : MonoBehaviour
         {
             audioCounter++;
             GameFlowManager.Instance.AddChatEvent("afterAudio" + audioCounter.ToString());
+            if (audioCounter >= 5)
+            {
+                GameFlowManager.Instance.SiluroEnding();
+            }
         }
         
 
