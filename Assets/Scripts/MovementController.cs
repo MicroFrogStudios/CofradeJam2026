@@ -24,9 +24,12 @@ public class MovementController : MonoBehaviour
     {
         if (!move) return;
 
-        if (paso != null)
+        if (nazareno1 != null && nazareno2 != null)
         {
-            paso.position = Vector2.MoveTowards(paso.position, endPoint.position, speed * Time.deltaTime);
+            if (Vector2.Distance(nazareno1.position, nazareno2.position) > followDistance)
+            {
+                nazareno1.position = Vector2.MoveTowards(nazareno1.position, nazareno2.position, speed * Time.deltaTime);
+            }
         }
 
         if (nazareno2 != null && paso != null)
@@ -37,12 +40,9 @@ public class MovementController : MonoBehaviour
             }
         }
 
-        if (nazareno1 != null && nazareno2 != null)
+        if (paso != null)
         {
-            if (Vector2.Distance(nazareno1.position, nazareno2.position) > followDistance)
-            {
-                nazareno1.position = Vector2.MoveTowards(nazareno1.position, nazareno2.position, speed * Time.deltaTime);
-            }
+            paso.position = Vector2.MoveTowards(paso.position, endPoint.position, speed * Time.deltaTime);
         }
     }
 }

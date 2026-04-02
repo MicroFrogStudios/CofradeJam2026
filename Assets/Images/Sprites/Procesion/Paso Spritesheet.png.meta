@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3632426086f72d146808671b013f1f10
+guid: c8742992b28c2f04f9a8f32a2ce4d81b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nazareno 1 Spritesheet_0
+      name: Paso Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 500
+        width: 2000
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7decec0fe69ebf14e842f3318db8434d
-      internalID: 1980835931
+      spriteID: 61c99074935bf254e86842ffc436968f
+      internalID: 2144729021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nazareno 1 Spritesheet_1
+      name: Paso Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 500
+        x: 2000
         y: 0
-        width: 500
-        height: 500
+        width: 2000
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a059b676789c4c4e80bf1fd7553da6b
-      internalID: -220329623
+      spriteID: 9ddd5f6de63ed1543925d17ef8dc6deb
+      internalID: -1667023037
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 688dff74f2d75094ba41e59b545861ff
+    spriteID: 58df78017b5491d4b82ade9c17af381f
     internalID: 0
     vertices: []
     indices: 
@@ -154,8 +154,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Nazareno 1 Spritesheet_0: 1980835931
-      Nazareno 1 Spritesheet_1: -220329623
+      Paso Spritesheet_0: 2144729021
+      Paso Spritesheet_1: -1667023037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
