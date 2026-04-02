@@ -130,6 +130,9 @@ public class AudioNoiseProcessing : MonoBehaviour
         startedRecording = false;
         GameFlowManager.Instance.startIdleTime = Time.time;
         GameFlowManager.Instance.idle = true;
+        beingLoud = 0;
+        beingQuiet = 0;
+
         
     }
 
@@ -236,7 +239,11 @@ public class AudioNoiseProcessing : MonoBehaviour
     void HandleMistakes()
     {
         if (overLoudMistakes > 3) {
-        //tiburon te come
+            GameFlowManager.Instance.SharkGameOver();
+            EndGameRecording();
+            GameFlowManager.Instance.phone.gameObject.SetActive(false);
+            gameObject.SetActive(false);
+            return;
         }
 
         if (audioTime + audioStart > Time.time)

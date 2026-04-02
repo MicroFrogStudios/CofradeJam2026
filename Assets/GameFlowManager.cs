@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -18,6 +19,8 @@ public class GameFlowManager : MonoBehaviour
 
     public Animator[] shushers;
     public Animator Shark;
+    public Animator besugo;
+    public Animator gameOverAnim;
     public void AddChatEvent(string chatName)
     {
         ActiveChat = Array.Find(Chats, chat => chat.chatName == chatName);
@@ -74,5 +77,26 @@ public class GameFlowManager : MonoBehaviour
 
             EndChatEvent();
         }
+    }
+
+    public void SharkGameOver()
+    { 
+        StartCoroutine(animationAndFade());
+    }
+
+    IEnumerator animationAndFade()
+    {
+        AudioSource[] music = Camera.main.GetComponents<AudioSource>();
+        foreach (AudioSource audio in music)
+            audio.Stop(); 
+        
+        SlidesManager.Instance.StartCoroutine(SlidesManager.Instance.FadeOut());
+        yield return new WaitForSeconds(2);
+        SlidesManager.Instance.cinematicBars.Play();
+        besugo.gameObject.SetActive(false);
+        Shark.gameObject.SetActive(false);
+        SlidesManager.Instance.StartCoroutine(SlidesManager.Instance.FadeIn());
+        Camera.main.GetComponent<Animation>().Play();
+        gameOverAnim.gameObject.SetActive(true);
     }
 }

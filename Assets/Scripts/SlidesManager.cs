@@ -8,6 +8,13 @@ public class SlidesManager : MonoBehaviour
 {
 
     public Image fadeImage;
+    public Animation cinematicBars;
+
+    public static SlidesManager Instance;
+    public void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -17,7 +24,7 @@ public class SlidesManager : MonoBehaviour
 
     public void NextScene()
     {
-        StartCoroutine(FadeOut());
+        StartCoroutine(FadeOutToNextScene());
     }
 
     private void Update()
@@ -29,7 +36,7 @@ public class SlidesManager : MonoBehaviour
         }
     }
 
-    IEnumerator FadeIn()
+    public IEnumerator FadeIn()
     {
         Color c = fadeImage.color;
         for (float alpha = 1f; alpha > 0f; alpha -= 0.01f)
@@ -42,7 +49,7 @@ public class SlidesManager : MonoBehaviour
 
     }
 
-    IEnumerator FadeOut()
+    IEnumerator FadeOutToNextScene()
     {
         Color c = fadeImage.color;
         for (float alpha = 0f; alpha < 1f; alpha += 0.01f)
@@ -54,8 +61,15 @@ public class SlidesManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-
-
-
+    public IEnumerator FadeOut()
+    {
+        Color c = fadeImage.color;
+        for (float alpha = 0f; alpha < 1f; alpha += 0.01f)
+        {
+            c.a = alpha;
+            fadeImage.color = c;
+            yield return null;
+        }
+    }
 
 }
