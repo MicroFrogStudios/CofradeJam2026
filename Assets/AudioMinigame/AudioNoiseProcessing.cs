@@ -7,7 +7,7 @@ public class AudioNoiseProcessing : MonoBehaviour
 
 
     public GameObject voiceLevelMarker;
-    public Transform TargetLoudness;
+    public RectTransform TargetLoudness;
     public AudioSource audioSource;
     public float updateStep = 0.1f;
     private string CurrentMicroDevice;
@@ -156,8 +156,8 @@ public class AudioNoiseProcessing : MonoBehaviour
 
             
             float normLoud = (GameVoiceLoudness - minLoud) / (maxLoud - minLoud);
-            bool tooLoud = normLoud > TargetLoudness.localPosition.y + TargetLoudness.localScale.y * 0.5f;
-            bool tooQuiet = normLoud < TargetLoudness.localPosition.y - TargetLoudness.localScale.y * 0.5f;
+            bool tooLoud = normLoud > TargetLoudness.anchoredPosition.x + TargetLoudness.sizeDelta.x * 0.5f;
+            bool tooQuiet = normLoud < TargetLoudness.anchoredPosition.x - TargetLoudness.sizeDelta.x * 0.5f;
 
             if (tooQuiet)
             {

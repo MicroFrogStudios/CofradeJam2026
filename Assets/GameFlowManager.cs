@@ -1,0 +1,53 @@
+using System;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class GameFlowManager : MonoBehaviour
+{
+    public ChatConversationSO[] Chats;
+    public PhoneController phone;
+    [HideInInspector]
+    public ChatConversationSO ActiveChat;
+    public float messageDelay = 1.2f;
+    public float timePassed = 0;
+
+
+   public void StartChatEvent(string chatName)
+    {
+        ActiveChat = Array.Find(Chats, chat => chat.chatName == chatName);
+    }
+
+    private void Start()
+    {
+        StartChatEvent("start");
+    }
+
+    void EndChatEvent()
+    {
+        //give control back
+        ActiveChat.indexPointer = 0;
+        ActiveChat = null;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (ActiveChat == null)
+            return;
+
+        timePassed += Time.deltaTime;
+        if (timePassed > messageDelay )
+        {
+            timePassed = 0;
+            if (ActiveChat.HasNext())
+            {
+                string message = ActiveChat.GetNext();
+                Debug.Log(message);
+                phone.AddChatMessage(message);
+                return;
+            }
+
+            EndChatEvent();
+        }
+    }
+}
