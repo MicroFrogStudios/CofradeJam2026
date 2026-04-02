@@ -221,9 +221,16 @@ public class AudioNoiseProcessing : MonoBehaviour
 
     void Shush()
     {
-        for (int i = 0; i < overLoudMistakes && i < GameFlowManager.Instance.shushers.Length; i++) {
+        if (overLoudMistakes >= 4)
+            return;
+
+        for (int i = 0; i < overLoudMistakes*3 && i < GameFlowManager.Instance.shushers.Length; i++) {
             GameFlowManager.Instance.shushers[i].SetTrigger("Callando");
         }
+
+        GameFlowManager.Instance.Shark.SetTrigger("Tiburon_Callando_0" + overLoudMistakes.ToString());
+
+        AudioManager.instance.Play("shhSonido" + overLoudMistakes.ToString());
     }
 
     void HandleMistakes()

@@ -11,7 +11,7 @@ public class GameFlowManager : MonoBehaviour
     public float messageDelay = 1.2f;
     public float timePassed = 0;
     public static GameFlowManager Instance;
-    public float idleTimeoutTime = 13f;
+    public float idleTimeoutTime = 20f;
     public float startIdleTime;
     public bool idle = true;
     public int timeoutCount = 0;
@@ -41,7 +41,7 @@ public class GameFlowManager : MonoBehaviour
         ActiveChat.indexPointer = 0;
         ActiveChat = null;
         startIdleTime = Time.time;
-        idle = true;
+        
     }
 
     // Update is called once per frame
@@ -50,7 +50,7 @@ public class GameFlowManager : MonoBehaviour
         if (startIdleTime + idleTimeoutTime < Time.time && idle)
         {
             timeoutCount++;
-            idle = false;
+            startIdleTime = Time.time;
             if (timeoutCount >= 4)
                 return;
             AddChatEvent("timeout" + timeoutCount.ToString());

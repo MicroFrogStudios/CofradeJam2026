@@ -636,10 +636,12 @@ MonoBehaviour:
   timeoutCount: 1
   shushers:
   - {fileID: 1415771007}
+  - {fileID: 579557411}
   - {fileID: 1431673102}
-  - {fileID: 839961894}
-  - {fileID: 1771777959}
   - {fileID: 517941574}
+  - {fileID: 1193528307}
+  - {fileID: 1771777959}
+  - {fileID: 839961894}
   Shark: {fileID: 1452335937}
 --- !u!4 &246327828
 Transform:
@@ -1947,14 +1949,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1452335936}
   - {fileID: 1415771006}
-  - {fileID: 1431673101}
-  - {fileID: 839961893}
-  - {fileID: 1771777958}
-  - {fileID: 517941573}
   - {fileID: 579557410}
+  - {fileID: 1431673101}
+  - {fileID: 517941573}
   - {fileID: 1193528306}
+  - {fileID: 1771777958}
+  - {fileID: 839961893}
   m_Father: {fileID: 2125803379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1148365423
@@ -2489,8 +2490,20 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: shhSonido
+  - name: shhSonido1
     clip: {fileID: 8300000, guid: e7887cb69134e01489e3d49a72f37dd6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: shhSonido2
+    clip: {fileID: 8300000, guid: 1b2407334f4202a4e882491689107a00, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: shhSonido3
+    clip: {fileID: 8300000, guid: a72e1deb8ce511a49a947c14ec788ed8, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -3061,11 +3074,11 @@ Transform:
   m_GameObject: {fileID: 1452335935}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.141, y: -1.176, z: 0}
+  m_LocalPosition: {x: 1.141, y: -1.176, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1022725490}
+  m_Father: {fileID: 2125803379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1452335937
 Animator:
@@ -4024,6 +4037,7 @@ Transform:
   m_Children:
   - {fileID: 1390002132}
   - {fileID: 1285769367}
+  - {fileID: 1452335936}
   - {fileID: 1022725490}
   - {fileID: 1716957209}
   - {fileID: 1405812177}
@@ -4156,6 +4170,10 @@ PrefabInstance:
     - target: {fileID: 8977126681134384342, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: bufferLoudness
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977126681134384342, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: errorTolerance
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8977126681134384342, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: targetLoudness
