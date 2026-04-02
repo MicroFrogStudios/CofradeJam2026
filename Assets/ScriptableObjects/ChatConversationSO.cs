@@ -8,14 +8,16 @@ public class ChatConversationSO : ScriptableObject
 
     public int indexPointer = 0;
 
-
+    public bool[] isLong;
     public bool HasNext()
     {
         return indexPointer < messagesArray.Length;
     }
-    public string GetNext()
+    public (string, bool) GetNext()
     {
-        return messagesArray[indexPointer++];
+        var res  = (messagesArray[indexPointer] , isLong[indexPointer]);
+        indexPointer++;
+        return res;
     }
 
 }

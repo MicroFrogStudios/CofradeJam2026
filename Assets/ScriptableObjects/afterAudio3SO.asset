@@ -16,3 +16,5 @@ MonoBehaviour:
   messagesArray:
   - "uff me he encontrao a la sushi\u2026 la primera vez desde q cortamo"
   - "dime d\xF3nde est\xE1s q kiero llegar ya :("
+  indexPointer: 0
+  isLong: 0100

@@ -890,9 +890,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1882022392411a24abaa1ef824589987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IncomingTextPrefab: {fileID: 4007975850857576507, guid: 80178ed318e92b44580b4d17732d3bb6, type: 3}
+  IncomingTextLongPrefab: {fileID: 4007975850857576507, guid: 80178ed318e92b44580b4d17732d3bb6, type: 3}
+  IncomingTextShortPrefab: {fileID: 4007975850857576507, guid: 7982c732339c6e44487386fe75d50a8c, type: 3}
   ContentContainer: {fileID: 6167389611958039937}
-  VoiceMessagePrefab: {fileID: 0}
+  VoiceMessagePrefab: {fileID: 4524315532008220860, guid: bc7450cbdd4717e49a66cbbe86e54d8f, type: 3}
+  audioCounter: 0
 --- !u!114 &2595883885311650715
 MonoBehaviour:
   m_ObjectHideFlags: 0

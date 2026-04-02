@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3da5f0a494701247a82e26bd5091cad, type: 3}
   m_Name: tooQuiet1SO
   m_EditorClassIdentifier: 
-  chatName: TooQuiet
+  chatName: tooQuiet
   messagesArray:
   - "cabesa habla m\xE1s alto q no me entero de n\xE1"
+  indexPointer: 0
+  isLong: 01

@@ -35,7 +35,9 @@ public class AudioNoiseProcessing : MonoBehaviour
 
     public int beingQuiet, beingLoud;
     public int errorTolerance = 30;
-    
+
+    public float audioTime = 10f;
+    private float audioStart;
 
     private void Start()
     {
@@ -108,6 +110,7 @@ public class AudioNoiseProcessing : MonoBehaviour
         audioSource.Play();
         TargetLoudness.GetComponent<Animation>().Play();
         startedRecording = true;
+        audioStart = Time.time;
 
     }
 
@@ -190,6 +193,8 @@ public class AudioNoiseProcessing : MonoBehaviour
                 {
                     overLoudMistakes++;
                     beingLoud = 0;
+                    //shh
+                    Debug.Log("SHHH");
                 }
             }
                 
@@ -201,7 +206,8 @@ public class AudioNoiseProcessing : MonoBehaviour
                 voiceLevelMarker.GetComponent<SpriteRenderer>().color = Color.green;
             }
 
-            
+
+            HandleMistakes();
 
             voiceLevelMarker.transform.SetLocalPositionAndRotation(new Vector3(0,Mathf.Clamp(normLoud,0,1),0), Quaternion.identity);
 
@@ -211,13 +217,29 @@ public class AudioNoiseProcessing : MonoBehaviour
 
     }
 
+    void HandleMistakes()
+    {
+        if (overLoudMistakes > 3) {
+        //tiburon te come
+        }
+
+        if (audioTime + audioStart > Time.time)
+            return;
+        
+        EndGameRecording();
+        if (underLoudMistakes > 3)
+        {
+            GameFlowManager.Instance.phone.AddVoiceMessage(true);
+            underLoudMistakes = 0;
+            return;
+        }
+        GameFlowManager.Instance.phone.AddVoiceMessage(false);
+
+    }
 
     void SampleAudio()
     {
-        //audioSource.GetOutputData(clipSampleData, 0);
-        
-        //audioSource.clip.GetData(clipSampleData, audioSource.timeSamples); //The more samplse you get, the more accurate and smooth the reading, but also more costly.
-        //audioSource.clip.GetData(clipSampleData, audioSource.timeSamples); //The more samplse you get, the more accurate and smooth the reading, but also more costly.
+
         audioSource.clip.GetData(clipSampleData, Microphone.GetPosition(CurrentMicroDevice) - sampleBuffer); //The more samplse you get, the more accurate and smooth the reading, but also more costly.
         clipLoudness = 0f;
         foreach (var sample in clipSampleData)

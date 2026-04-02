@@ -16,3 +16,5 @@ MonoBehaviour:
   messagesArray:
   - "esto est\xE1 petao de gente killo"
   - "m\xE1ndame otro a ve si consigo triangul\xE1 tu posici\xF3n"
+  indexPointer: 0
+  isLong: 0001

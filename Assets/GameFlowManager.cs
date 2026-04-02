@@ -10,16 +10,23 @@ public class GameFlowManager : MonoBehaviour
     public ChatConversationSO ActiveChat;
     public float messageDelay = 1.2f;
     public float timePassed = 0;
+    public static GameFlowManager Instance;
 
 
-   public void StartChatEvent(string chatName)
+    public void AddChatEvent(string chatName)
     {
         ActiveChat = Array.Find(Chats, chat => chat.chatName == chatName);
     }
 
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
-        StartChatEvent("start");
+        AddChatEvent("start");
     }
 
     void EndChatEvent()
@@ -41,9 +48,9 @@ public class GameFlowManager : MonoBehaviour
             timePassed = 0;
             if (ActiveChat.HasNext())
             {
-                string message = ActiveChat.GetNext();
+                (string message, bool isLong ) = ActiveChat.GetNext();
                 Debug.Log(message);
-                phone.AddChatMessage(message);
+                phone.AddChatMessage(message,isLong );
                 return;
             }
 

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3da5f0a494701247a82e26bd5091cad, type: 3}
   m_Name: Timeout1SO
   m_EditorClassIdentifier: 
-  chatName: Timeout1
+  chatName: timeout1
   messagesArray:
   - mamona q al final me lo pierdo, dime algo
+  indexPointer: 0
+  isLong: 00

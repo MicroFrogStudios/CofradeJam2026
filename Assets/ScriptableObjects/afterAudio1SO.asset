@@ -16,3 +16,5 @@ MonoBehaviour:
   messagesArray:
   - anda q vas a escribi cacho merluza
   - bueh, sigue diciendo a ve si te ubico
+  indexPointer: 0
+  isLong: 0000

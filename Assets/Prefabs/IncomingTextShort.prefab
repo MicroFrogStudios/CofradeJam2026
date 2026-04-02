@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8699219723015125575}
   - component: {fileID: 1133556393767224865}
   m_Layer: 5
-  m_Name: IncomingText
+  m_Name: IncomingTextShort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4007975850857576507}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a01ba29eb8c10714f954aeebe85820cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc752cce53f7598438c2fbccb026927e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_text: Besugo donde andas??
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbb8782f09282f244b77788cd3849995, type: 2}
-  m_sharedMaterial: {fileID: 2407600648071659007, guid: bbb8782f09282f244b77788cd3849995, type: 2}
+  m_sharedMaterial: {fileID: 5641683487711725387, guid: bbb8782f09282f244b77788cd3849995, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
