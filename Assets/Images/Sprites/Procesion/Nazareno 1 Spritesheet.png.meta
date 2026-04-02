@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74c0faa2f94725346bde59f04c39a17f
+guid: 3632426086f72d146808671b013f1f10
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_Gente_4_B_0
+      name: Nazareno 1 Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1500
-        height: 1500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b2993266bdc45a4ab75f9c9be0098e8
-      internalID: -1221505856
+      spriteID: 7decec0fe69ebf14e842f3318db8434d
+      internalID: 1980835931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_Gente_4_B_1
+      name: Nazareno 1 Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 500
         y: 0
-        width: 1500
-        height: 1500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe6444a67a3556045857b9b389c128da
-      internalID: 787818213
+      spriteID: 6a059b676789c4c4e80bf1fd7553da6b
+      internalID: -220329623
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 806252684521ffc44bcdef36b45b9dc2
+    spriteID: 688dff74f2d75094ba41e59b545861ff
     internalID: 0
     vertices: []
     indices: 
@@ -154,8 +154,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spritesheet_Gente_4_B_0: -1221505856
-      Spritesheet_Gente_4_B_1: 787818213
+      Nazareno 1 Spritesheet_0: 1980835931
+      Nazareno 1 Spritesheet_1: -220329623
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
