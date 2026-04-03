@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FadeTextMicrophoneWarning.unity
+    path: Assets/Scenes/01_MenuPrincipal.unity
     guid: 7dca0d07780a5044380e0b6e912ab9de
   - enabled: 1
     path: Assets/Scenes/CalibrationScene.unity
