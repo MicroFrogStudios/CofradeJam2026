@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CalibrationScene.unity
     guid: 3b3ab48c23990da4b91f60c5c70eaa19
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 8058e8e0b4576974390bb408b0249f5c
+  - enabled: 1
     path: Assets/Scenes/FadeTextLore1.unity
     guid: 950772751b725b245b94d0e35f859218
   - enabled: 1

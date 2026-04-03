@@ -56,6 +56,8 @@ public class GameFlowManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (startIdleTime + idleTimeoutTime < Time.time && idle)
         {
             timeoutCount++;
