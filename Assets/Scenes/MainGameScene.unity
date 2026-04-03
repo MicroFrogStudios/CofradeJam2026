@@ -2309,7 +2309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3865598392098643279, guid: 47324fde0bcc5024c9913a474e609bda, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4169946395981773686, guid: 47324fde0bcc5024c9913a474e609bda, type: 3}
       propertyPath: m_Pivot.x
@@ -5385,8 +5385,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 903182919213864863, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 903182919213864863, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: fb8e323aa3bf41d4a87c43efc1a06c24, type: 2}
+    - target: {fileID: 903182919213864863, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 903182919213864863, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 903182919213864863, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: 'm_Animations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7400000, guid: fb8e323aa3bf41d4a87c43efc1a06c24, type: 2}
+    - target: {fileID: 903182919213864863, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: 'm_Animations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7400000, guid: fb8e323aa3bf41d4a87c43efc1a06c24, type: 2}
     - target: {fileID: 1253680829107826086, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_FlipY
       value: 0
