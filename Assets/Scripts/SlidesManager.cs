@@ -73,4 +73,9 @@ public class SlidesManager : MonoBehaviour
         }
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
 }
