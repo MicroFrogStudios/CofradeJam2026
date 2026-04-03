@@ -5591,6 +5591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioMinigamePrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 8977126681134384342, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: speedIncrementPct
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

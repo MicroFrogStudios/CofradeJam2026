@@ -169,8 +169,8 @@ public class AudioNoiseProcessing : MonoBehaviour
            
 
             if (gameInfo.hasMicro && GameVoiceLoudness < clipLoudness || Input.GetKey(KeyCode.Space)) 
-            { 
-                
+            {
+                Debug.Log("??");
                 GameVoiceLoudness += (gameInfo.maxLoud - gameInfo.minLoud) * speedIncrementPct;
                 gainSpeed = 0f;
             }
