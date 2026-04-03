@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class CreditScroll : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-
-    // Update is called once per frame
+    public float speed = 50f;
     void Update()
     {
-        GetComponent<RectTransform>().anchoredPosition += 50f * Time.deltaTime * Vector2.up;
+        GetComponent<RectTransform>().anchoredPosition += speed * Time.deltaTime * Vector2.up;
     }
 }
