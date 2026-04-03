@@ -56,7 +56,11 @@ public class GameFlowManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time.timeSinceLevelLoad > 136f)
+        {
+            TimeOutGameOver();
+            return;
+        }
 
         if (startIdleTime + idleTimeoutTime < Time.time && idle)
         {
@@ -90,6 +94,16 @@ public class GameFlowManager : MonoBehaviour
     public void SharkGameOver()
     { 
         StartCoroutine(animationAndFade());
+    }
+
+    public void TimeOutGameOver()
+    {
+        AudioSource[] music = Camera.main.GetComponents<AudioSource>();
+        foreach (AudioSource audio in music)
+            audio.Stop();
+        SlidesManager.Instance.cinematicBars.Play();
+        AddChatEvent("timeoutEnd");
+        GameOverUI.SetActive(true);
     }
 
     IEnumerator animationAndFade()
