@@ -613,7 +613,7 @@ MonoBehaviour:
   updateStep: 0.1
   sampleBuffer: 8192
   GameVoiceLoudness: 0
-  gravityPct: 0.005
+  gravityPct: 0.015
   speedIncrementPct: 0.05
   underLoudMistakes: 0
   overLoudMistakes: 0
