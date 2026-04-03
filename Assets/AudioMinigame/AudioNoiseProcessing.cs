@@ -41,6 +41,13 @@ public class AudioNoiseProcessing : MonoBehaviour
     private Vector3 goalPos;
     private void Start()
     {
+
+        gameInfo.maxLoud = PlayerPrefs.GetFloat("maxLoud");
+        gameInfo.minLoud = PlayerPrefs.GetFloat("minLoud");
+        gameInfo.calibrated = PlayerPrefs.GetInt("calib") == 1;
+        gameInfo.hasMicro = PlayerPrefs.GetInt("hasMicro") == 1;
+
+
         goalPos = transform.position;
         clipSampleData = new float[sampleBuffer];
         if (gameInfo.calibrated)
@@ -92,6 +99,10 @@ public class AudioNoiseProcessing : MonoBehaviour
         grav = (gameInfo.maxLoud - gameInfo.minLoud) * gravityPct;
         Debug.Log("Max loud: " + gameInfo.maxLoud + " || min loud: " + gameInfo.minLoud);
         gameInfo.calibrated = true;
+        PlayerPrefs.SetFloat("maxLoud", gameInfo.maxLoud);
+        PlayerPrefs.SetFloat("minLoud", gameInfo.minLoud);
+        PlayerPrefs.SetInt("calib", 1);
+        PlayerPrefs.SetInt("hasMicro", 1);
     }
 
 
