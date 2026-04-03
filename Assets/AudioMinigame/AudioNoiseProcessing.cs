@@ -134,7 +134,7 @@ public class AudioNoiseProcessing : MonoBehaviour
         beingLoud = 0;
         beingQuiet = 0;
         goalPos = transform.position - Vector3.right * 2;
-
+        GameFlowManager.Instance.besugo.SetBool("Hablando", false);
     }
 
 
@@ -213,7 +213,7 @@ public class AudioNoiseProcessing : MonoBehaviour
                 voiceLevelMarker.GetComponent<SpriteRenderer>().color = Color.green;
             }
 
-
+            GameFlowManager.Instance.besugo.SetBool("Hablando", !tooQuiet);
             HandleMistakes();
 
             voiceLevelMarker.transform.SetLocalPositionAndRotation(new Vector3(0,Mathf.Clamp(normLoud,0,1),-0.01f), Quaternion.identity);

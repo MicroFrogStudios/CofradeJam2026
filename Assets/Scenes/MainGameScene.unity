@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9104425659045657954, guid: ef9024ced7f527b4ba2f11cdfa001709, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartGameRecording
+      value: ToggleGameRecording
       objectReference: {fileID: 0}
     - target: {fileID: 9104425659045657954, guid: ef9024ced7f527b4ba2f11cdfa001709, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -897,7 +897,8 @@ MonoBehaviour:
   startIdleTime: 0
   idle: 1
   timeoutCount: 0
-  winning: 0
+  isWinning: 0
+  isGameOver: 0
   shushers:
   - {fileID: 1415771007}
   - {fileID: 579557411}
@@ -5538,6 +5539,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 620616157247340857, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.521
+      objectReference: {fileID: 0}
+    - target: {fileID: 620616157247340857, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1672731436892250636, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5

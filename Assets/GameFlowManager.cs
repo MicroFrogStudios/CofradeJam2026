@@ -30,6 +30,7 @@ public class GameFlowManager : MonoBehaviour
     public void AddChatEvent(string chatName)
     {
         ActiveChat = Array.Find(Chats, chat => chat.chatName == chatName);
+        besugo.SetBool("leyendo", true);
     }
 
 
@@ -51,7 +52,8 @@ public class GameFlowManager : MonoBehaviour
         ActiveChat.indexPointer = 0;
         ActiveChat = null;
         startIdleTime = Time.time;
-        
+        besugo.SetBool("leyendo", false);
+
     }
 
     // Update is called once per frame
