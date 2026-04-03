@@ -46,7 +46,10 @@ public class AudioNoiseProcessing : MonoBehaviour
         gameInfo.minLoud = PlayerPrefs.GetFloat("minLoud");
         gameInfo.calibrated = PlayerPrefs.GetInt("calib") == 1;
         gameInfo.hasMicro = PlayerPrefs.GetInt("hasMicro") == 1;
-
+        if (gameInfo.maxLoud == 0)
+        {
+            gameInfo.maxLoud = 1;
+        }
 
         goalPos = transform.position;
         clipSampleData = new float[sampleBuffer];
@@ -196,7 +199,7 @@ public class AudioNoiseProcessing : MonoBehaviour
             {
                 voiceLevelMarker.GetComponent<SpriteRenderer>().color = Color.white;
                 beingQuiet++;
-                if( beingQuiet > 30)
+                if( beingQuiet > errorTolerance)
                 {
                     underLoudMistakes++;
                     beingQuiet = 0;
@@ -207,7 +210,7 @@ public class AudioNoiseProcessing : MonoBehaviour
             {
                 voiceLevelMarker.GetComponent<SpriteRenderer>().color = Color.red;
                 beingLoud++;
-                if (beingLoud > 30)
+                if (beingLoud > errorTolerance)
                 {
                     overLoudMistakes++;
                     beingLoud = 0;

@@ -1217,8 +1217,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 487.57, y: 0}
-  m_SizeDelta: {x: -1374.4519, y: -574.6823}
+  m_AnchoredPosition: {x: 529, y: -22}
+  m_SizeDelta: {x: -1284.884, y: -574.6823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585904305
 MonoBehaviour:
@@ -1240,22 +1240,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'No te preocupes si no tienes micro,
-
+  m_text: 'No te preocupes si no tienes micro
 
 
     puedes continuar jugando pulsando
-    la barra espaciodora en lugar de hablar ;)'
+    la barra espaciodora en lugar de hablar'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bbb8782f09282f244b77788cd3849995, type: 2}
-  m_sharedMaterial: {fileID: 5641683487711725387, guid: bbb8782f09282f244b77788cd3849995, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 575ce049ab5a5274cab74045822310dd, type: 2}
+  m_sharedMaterial: {fileID: 5641683487711725387, guid: 575ce049ab5a5274cab74045822310dd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292575014
-  m_fontColor: {r: 0.14983091, g: 0.49959213, b: 0.8584906, a: 1}
+    rgba: 4293255129
+  m_fontColor: {r: 0.8497241, g: 0.87297523, b: 0.8962264, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1272,8 +1271,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1470,6 +1469,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 953783874}
     m_Modifications:
+    - target: {fileID: 581539132608304878, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -22.2759
+      objectReference: {fileID: 0}
+    - target: {fileID: 581539132608304878, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -16.7973
+      objectReference: {fileID: 0}
+    - target: {fileID: 581539132608304878, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.44069672
+      objectReference: {fileID: 0}
+    - target: {fileID: 581539132608304878, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.15159988
+      objectReference: {fileID: 0}
     - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1501,6 +1516,18 @@ PrefabInstance:
     - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 54.51999
+      objectReference: {fileID: 0}
+    - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1536,7 +1563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100.99991
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1548,6 +1575,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 916590885629560832, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338060583058471792, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_fontSize
+      value: 33.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338060583058471792, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bbb8782f09282f244b77788cd3849995, type: 2}
+    - target: {fileID: 2338060583058471792, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5641683487711725387, guid: bbb8782f09282f244b77788cd3849995, type: 2}
+    - target: {fileID: 2338060583058471792, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7154561092977701744, guid: e9a33640e62e7b04e988713b6f107b0e, type: 3}

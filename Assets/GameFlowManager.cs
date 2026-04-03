@@ -43,6 +43,7 @@ public class GameFlowManager : MonoBehaviour
     {
         AddChatEvent("start");
         startIdleTime = Time.time;
+        // Testing: StartCoroutine(WalikngSiluro());
 
     }
 
@@ -157,14 +158,14 @@ public class GameFlowManager : MonoBehaviour
         while (Vector3.Distance(besugo.transform.position, siluro.transform.position) > 2f)
         {
             Debug.Log("andando");
-            siluro.transform.position = Vector3.MoveTowards(siluro.transform.position, besugo.transform.position + Vector3.up * .8f, .01f);
+            siluro.transform.position = Vector3.MoveTowards(siluro.transform.position, besugo.transform.position + Vector3.up * .8f, 3f*Time.deltaTime);
             yield return null;
         }
 
         siluro.SetBool("andando", false);
         AddChatEvent("end");
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(7);
 
         SlidesManager.Instance.NextScene();
     }

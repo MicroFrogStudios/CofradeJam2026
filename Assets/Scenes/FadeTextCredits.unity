@@ -1494,12 +1494,12 @@ MonoBehaviour:
     Erika
 
 
-    Lola
+    Lola 
+    "Milo"
 
 
 
-    PICATECLAS
-    BINARIOS
+    PICATECLAS BINARIOS
 
 
     Microfrog
@@ -1508,12 +1508,12 @@ MonoBehaviour:
     Fran Dominguez
 
 
-    Dario Moreno
+    Dario
+    Moreno
 
 
 
-    LOKILLO
-    DEL EXCEL
+    LOKILLO DEL EXCEL
 
 
     Dario Moreno
@@ -1523,12 +1523,12 @@ MonoBehaviour:
     A TO VOLUMEN
 
 
-    Manu Cruz
+    Manu
+    Cruz
 
 
 
-    Gracias
-    por jugar a nuestro juego
+    Gracias por jugar a nuestro juego
 
 
     Felices Pascuas
@@ -2480,7 +2480,7 @@ Transform:
   m_GameObject: {fileID: 1646454769}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -215, y: 1428, z: 1148.8907}
+  m_LocalPosition: {x: -352, y: 1423, z: 1148.8907}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 1
   m_Children: []

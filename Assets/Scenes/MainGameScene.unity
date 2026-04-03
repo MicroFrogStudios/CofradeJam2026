@@ -188,8 +188,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5616468992487857341, guid: ef9024ced7f527b4ba2f11cdfa001709, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 84.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616468992487857341, guid: ef9024ced7f527b4ba2f11cdfa001709, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 86.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616468992487857341, guid: ef9024ced7f527b4ba2f11cdfa001709, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616468992487857341, guid: ef9024ced7f527b4ba2f11cdfa001709, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 97.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616468992487857341, guid: ef9024ced7f527b4ba2f11cdfa001709, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -226.2
       objectReference: {fileID: 0}
     - target: {fileID: 6047354986924631398, guid: ef9024ced7f527b4ba2f11cdfa001709, type: 3}
       propertyPath: m_AnchorMax.x
@@ -889,11 +905,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4fc8a6ca23478274f8f811b35fd99f1b, type: 2}
   - {fileID: 11400000, guid: 99971e217e395eb4a9cea1dc89d79623, type: 2}
   - {fileID: 11400000, guid: 7a0ae4cf7f34d084b9f62c3a8121ded9, type: 2}
+  - {fileID: 11400000, guid: b895ed3d01b736648b798c58997e3fe8, type: 2}
   phone: {fileID: 544718941}
   ActiveChat: {fileID: 0}
   messageDelay: 1.2
   timePassed: 0
-  idleTimeoutTime: 13
+  idleTimeoutTime: 25
   startIdleTime: 0
   idle: 1
   timeoutCount: 0
@@ -5590,6 +5607,10 @@ PrefabInstance:
     - target: {fileID: 6700345206127520324, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_Name
       value: AudioMinigamePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977126681134384342, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
+      propertyPath: errorTolerance
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8977126681134384342, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: speedIncrementPct
