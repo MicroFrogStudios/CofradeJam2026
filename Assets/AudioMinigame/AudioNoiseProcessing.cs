@@ -38,9 +38,10 @@ public class AudioNoiseProcessing : MonoBehaviour
 
     public float audioTime = 10f;
     private float audioStart;
-
+    private Vector3 goalPos;
     private void Start()
     {
+        goalPos = transform.position;
         clipSampleData = new float[sampleBuffer];
         if (gameInfo.calibrated)
         {
@@ -112,7 +113,7 @@ public class AudioNoiseProcessing : MonoBehaviour
         startedRecording = true;
         audioStart = Time.time;
         GameFlowManager.Instance.idle = false;
-
+        goalPos = transform.position + Vector3.right * 2;
     }
 
 
@@ -132,8 +133,8 @@ public class AudioNoiseProcessing : MonoBehaviour
         GameFlowManager.Instance.idle = true;
         beingLoud = 0;
         beingQuiet = 0;
+        goalPos = transform.position - Vector3.right * 2;
 
-        
     }
 
 
@@ -145,6 +146,7 @@ public class AudioNoiseProcessing : MonoBehaviour
             return;
         }
 
+        transform.position = Vector3.Lerp(transform.position, goalPos, .1f);
 
         if (!startedRecording)
         {
@@ -152,7 +154,7 @@ public class AudioNoiseProcessing : MonoBehaviour
         }
 
 
-
+       
 
         currentUpdateTime += Time.deltaTime;
         if (currentUpdateTime >= updateStep)
@@ -214,7 +216,7 @@ public class AudioNoiseProcessing : MonoBehaviour
 
             HandleMistakes();
 
-            voiceLevelMarker.transform.SetLocalPositionAndRotation(new Vector3(0,Mathf.Clamp(normLoud,0,1),0), Quaternion.identity);
+            voiceLevelMarker.transform.SetLocalPositionAndRotation(new Vector3(0,Mathf.Clamp(normLoud,0,1),-0.01f), Quaternion.identity);
 
             gainSpeed -= grav;
             GameVoiceLoudness += gainSpeed;
