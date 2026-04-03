@@ -101,6 +101,7 @@ public class GameFlowManager : MonoBehaviour
 
     public void TimeOutGameOver()
     {
+        isGameOver = true;
         AudioSource[] music = Camera.main.GetComponents<AudioSource>();
         foreach (AudioSource audio in music)
             audio.Stop();
