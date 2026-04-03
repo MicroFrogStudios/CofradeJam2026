@@ -58,7 +58,8 @@ public class SlidesManager : MonoBehaviour
             fadeImage.color = c;
             yield return null;
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int sceneCount = SceneManager.sceneCountInBuildSettings;
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % sceneCount);
     }
 
     public IEnumerator FadeOut()
