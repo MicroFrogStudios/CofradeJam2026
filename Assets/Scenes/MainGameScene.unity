@@ -5644,7 +5644,7 @@ PrefabInstance:
     - target: {fileID: 903182919213864863, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: 'm_Animations.Array.data[1]'
       value: 
-      objectReference: {fileID: 7400000, guid: fb8e323aa3bf41d4a87c43efc1a06c24, type: 2}
+      objectReference: {fileID: 7400000, guid: ba57e2492b9ad4e4eba200bb7e29abff, type: 2}
     - target: {fileID: 1253680829107826086, guid: 18565bb3b11ebb6438f6806ec2ed4c2d, type: 3}
       propertyPath: m_FlipY
       value: 0
