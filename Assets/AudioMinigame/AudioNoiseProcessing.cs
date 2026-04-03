@@ -57,11 +57,11 @@ public class AudioNoiseProcessing : MonoBehaviour
             return;
 
         CurrentMicroDevice = Microphone.devices[0];
-        
         string micDevice = Microphone.devices[0];
         Microphone.GetDeviceCaps(micDevice, out int minFreq, out int maxFreq);
         Debug.Log($"Mic supports: {minFreq}Hz - {maxFreq}Hz");
         Debug.Log($"Unity output rate: {AudioSettings.outputSampleRate}");
+        grav = (gameInfo.maxLoud - gameInfo.minLoud) * gravityPct;
 
     }
 
