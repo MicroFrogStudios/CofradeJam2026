@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatName: timeoutEnd
   messagesArray:
-  - "Ombree besugu\xEDin"
-  - "... po t\xE1 bonito el paso no?"
+  - "ea pue me perd\xED el paso"
+  - no podia envia un audio bien, tu no?
+  - a mi casa no te invito a come ma
+  - que tu lo sepa
   indexPointer: 0
-  isLong: 0000
+  isLong: 00010100
