@@ -174,9 +174,9 @@ public class AudioNoiseProcessing : MonoBehaviour
                 GameVoiceLoudness += (gameInfo.maxLoud - gameInfo.minLoud) * speedIncrementPct;
                 gainSpeed = 0f;
             }
- 
 
-            
+
+            GameVoiceLoudness = Mathf.Clamp(GameVoiceLoudness, gameInfo.minLoud, gameInfo.maxLoud);
             float normLoud = (GameVoiceLoudness - gameInfo.minLoud) / (gameInfo.maxLoud - gameInfo.minLoud);
             bool tooLoud = normLoud > TargetLoudness.anchoredPosition.x + TargetLoudness.sizeDelta.x * 0.5f;
             bool tooQuiet = normLoud < TargetLoudness.anchoredPosition.x - TargetLoudness.sizeDelta.x * 0.5f;
