@@ -18,7 +18,8 @@ public class GameFlowManager : MonoBehaviour
     public float startIdleTime;
     public bool idle = true;
     public int timeoutCount = 0;
-    public bool winning = false;
+    public bool isWinning = false;
+    public bool isGameOver = false;
     public Animator[] shushers;
     public Animator Shark;
     public Animator besugo;
@@ -56,7 +57,7 @@ public class GameFlowManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeSinceLevelLoad > 136f)
+        if (Time.timeSinceLevelLoad > 136f && !isGameOver)
         {
             TimeOutGameOver();
             return;
@@ -140,7 +141,7 @@ public class GameFlowManager : MonoBehaviour
 
     public void SiluroEnding()
     {
-        winning = true;
+        isWinning = true;
         idle = false;
         siluro.SetBool("andando", true);
         SlidesManager.Instance.cinematicBars.Play();

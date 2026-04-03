@@ -119,7 +119,7 @@ public class AudioNoiseProcessing : MonoBehaviour
 
     public void ToggleGameRecording()
     {
-        if (!startedRecording && !GameFlowManager.Instance.winning)
+        if (!startedRecording && !GameFlowManager.Instance.isWinning)
             StartGameRecording();
     }
 
