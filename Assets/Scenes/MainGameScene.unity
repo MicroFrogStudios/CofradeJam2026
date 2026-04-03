@@ -888,6 +888,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5966a2fea0f21d149b97cfb0268e5914, type: 2}
   - {fileID: 11400000, guid: 4fc8a6ca23478274f8f811b35fd99f1b, type: 2}
   - {fileID: 11400000, guid: 99971e217e395eb4a9cea1dc89d79623, type: 2}
+  - {fileID: 11400000, guid: 7a0ae4cf7f34d084b9f62c3a8121ded9, type: 2}
   phone: {fileID: 544718941}
   ActiveChat: {fileID: 0}
   messageDelay: 1.2

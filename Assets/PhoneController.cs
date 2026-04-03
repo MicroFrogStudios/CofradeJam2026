@@ -19,6 +19,7 @@ public class PhoneController : MonoBehaviour
         GameObject MessageInstance =  Instantiate(obj, ContentContainer);
         MessageInstance.GetComponentInChildren<TMP_Text>().text = text;
         AudioManager.instance.Play("noti1");
+        GetComponentInChildren<ScrollRect>().content.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, 200);
     }
 
     public void AddVoiceMessage(bool tooQuiet)
@@ -38,11 +39,7 @@ public class PhoneController : MonoBehaviour
                 GameFlowManager.Instance.SiluroEnding();
             }
         }
-        
-
-
-
-       
     }
+
 
 }

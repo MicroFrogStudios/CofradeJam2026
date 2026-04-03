@@ -142,7 +142,10 @@ public class GameFlowManager : MonoBehaviour
         }
 
         siluro.SetBool("andando", false);
-        GameFlowManager.Instance.AddChatEvent("end");
+        AddChatEvent("end");
 
+        yield return new WaitForSeconds(4);
+
+        SlidesManager.Instance.NextScene();
     }
 }
