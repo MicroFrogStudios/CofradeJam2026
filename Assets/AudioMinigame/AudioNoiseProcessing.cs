@@ -41,11 +41,13 @@ public class AudioNoiseProcessing : MonoBehaviour
     private Vector3 goalPos;
     private void Start()
     {
+        // no micro version
+        gameInfo.maxLoud = 1;
+        gameInfo.minLoud = 0;
+        gameInfo.calibrated = true;
+        gameInfo.hasMicro = false;
 
-        gameInfo.maxLoud = PlayerPrefs.GetFloat("maxLoud");
-        gameInfo.minLoud = PlayerPrefs.GetFloat("minLoud");
-        gameInfo.calibrated = PlayerPrefs.GetInt("calib") == 1;
-        gameInfo.hasMicro = PlayerPrefs.GetInt("hasMicro") == 1;
+        ///
         if (gameInfo.maxLoud == 0)
         {
             gameInfo.maxLoud = 1;
